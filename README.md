@@ -14,7 +14,7 @@ archive and image dependencies require their existing sibling checkouts as well.
 
 ```sh
 nix develop
-cargo run -p wsus-cli --locked -- --help
+cargo run --manifest-path crates/Cargo.toml -p wsus-cli --locked -- --help
 cargo test --workspace --all-features --locked
 cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
 cargo test --manifest-path fuzz/Cargo.toml --locked

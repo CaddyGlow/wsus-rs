@@ -1,9 +1,9 @@
 version: '3'
 tasks:
   build:
-    cmds: ["cargo build --package wsus-cli --release --locked"]
+    cmds: ["cargo build --manifest-path crates/Cargo.toml --package wsus-cli --release --locked"]
   run:
-    cmds: ["cargo run --package wsus-cli --locked -- {{.CLI_ARGS}}"]
+    cmds: ["cargo run --manifest-path crates/Cargo.toml --package wsus-cli --locked -- {{.CLI_ARGS}}"]
   check:
     cmds:
       - cargo fmt --all -- --check
@@ -13,9 +13,9 @@ tasks:
     env:
       RUSTFLAGS: '-C target-feature=+crt-static'
     cmds:
-      - cargo xwin build --package wsus-cli --release --locked --target x86_64-pc-windows-msvc {{.CLI_ARGS}}
+      - cargo xwin build --manifest-path crates/Cargo.toml --package wsus-cli --release --locked --target x86_64-pc-windows-msvc {{.CLI_ARGS}}
       - mkdir -p dist
-      - cp target/x86_64-pc-windows-msvc/release/wsus.exe dist/wsus.exe
+      - cp crates/target/x86_64-pc-windows-msvc/release/wsus.exe dist/wsus.exe
   fuzz:check:
     cmds:
       - cargo clippy --manifest-path fuzz/Cargo.toml --all-targets --locked -- -D warnings
