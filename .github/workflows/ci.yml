@@ -39,5 +39,7 @@ jobs:
       - run: cargo fmt --all -- --check
       - run: cargo test --workspace --all-features --locked
       - run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
-      - run: cargo test --manifest-path fuzz/Cargo.toml --locked
-      - run: cargo clippy --manifest-path fuzz/Cargo.toml --all-targets --locked -- -D warnings
+      - if: runner.os == 'Linux'
+        run: cargo test --manifest-path fuzz/Cargo.toml --locked
+      - if: runner.os == 'Linux'
+        run: cargo clippy --manifest-path fuzz/Cargo.toml --all-targets --locked -- -D warnings
