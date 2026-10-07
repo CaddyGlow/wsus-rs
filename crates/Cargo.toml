@@ -1,0 +1,31 @@
+[workspace]
+members = ["wsus-client", "wsus-server", "wsus-cli"]
+resolver = "3"
+exclude = ["wsus-protocol"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+publish = false
+repository = "https://github.com/CaddyGlow/wsus-rs"
+
+[workspace.dependencies]
+hexspell = { git = "https://github.com/CaddyGlow/HexSpell", rev = "6c3b5848fd347f39cf7eef920f55aab21b1a4bc3", default-features = false }
+cabinet = { package = "ms-cabinet", version = "0.1.0", path = "../../cabinet" }
+libmkiso = { version = "0.1.0", path = "../mkiso-rs", default-features = false }
+wsus-protocol = { version = "0.1.0", path = "wsus-protocol" }
+wsus-client = { version = "0.1.0", path = "wsus-client" }
+wsus-server = { version = "0.1.0", path = "wsus-server" }
+anyhow = "1.0"
+clap = "4.5"
+serde_json = "1.0"
+tempfile = "3.23"
+
+[workspace.lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[profile.release]
+lto = "thin"
+strip = true
+

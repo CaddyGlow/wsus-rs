@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.51,
+    "time_to_first_response_byte": 1.577,
+    "total": 1.734,
+    "upstream_connect": 0.276
+  },
+  "error": null,
+  "exchange": 623,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ServerSyncWebService/ServerSyncWebService.asmx",
+  "request_body_bytes": 670,
+  "request_body_sha256": "b06852a83152e56104609696fc5f0d152c83895a06c2b81f9617700e86107662",
+  "response_body_bytes": 999,
+  "response_body_sha256": "22b3f89de734addf2fc6dde6ddeb02cfa82f3f4da0f33a4021ab98da5bc6b617",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/GetConfigData",
+  "status": 200,
+  "timestamp": "2026-10-04T16:25:43.750+00:00",
+  "upstream_body_ms": 0.066
+}

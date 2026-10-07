@@ -1,0 +1,45 @@
+[package]
+name = "wsus-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "WSUS server: catalog, policy, content store, endpoints"
+
+[dependencies]
+wsus-protocol.workspace = true
+wsus-client.workspace = true
+cabinet.workspace = true
+thiserror = "2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json.workspace = true
+sha1 = "0.10"
+sha2 = "0.10"
+rusqlite = { version = "0.37", features = ["bundled"] }
+uuid = { version = "1.18", features = ["serde", "v4", "v5"] }
+hmac = "0.12"
+base64 = "0.22"
+# HTTP binding (feature `http`). axum 0.8 was chosen over bare hyper 1.x after a
+# prototype: the neutral handler needs only "one fallback handler that gets the whole
+# request and returns a body stream", which axum gives in ~60 lines (body-limit
+# collection, Body::from_stream) while hyper would additionally need a hand-written
+# accept loop, connection builder and graceful shutdown. axum is a thin layer over
+# hyper 1.x, adds no routing opinions here, and lets the binary mount the service in a
+# bigger Router later (TLS, tracing layers) without a rewrite.
+axum = { version = "0.8", optional = true, default-features = false, features = ["http1", "tokio"] }
+tokio = { version = "1", optional = true, features = ["rt", "net", "sync"] }
+futures-util = { version = "0.3", default-features = false, features = ["std", "async-await"] }
+
+[features]
+default = []
+http = ["dep:axum", "dep:tokio"]
+
+[dev-dependencies]
+tempfile.workspace = true
+tokio = { version = "1", features = ["rt", "rt-multi-thread", "macros", "net", "sync", "io-util"] }
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
+
+[lints]
+workspace = true

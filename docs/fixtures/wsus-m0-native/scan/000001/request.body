@@ -1,0 +1,1 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetConfig xmlns="http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService"><protocolVersion>2.90</protocolVersion></GetConfig></s:Body></s:Envelope>

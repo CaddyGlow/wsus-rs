@@ -1,0 +1,27 @@
+Native Windows Update Agent installing the 2026-09 .NET Framework 3.5 and 4.8.1 cumulative update (KB5126052, OSInstaller
+handler, Microsoft.NetFX.amd64 2400.26200.9347.1) from the lab WSUS on a Windows 11 25H2 guest (UBR 8037).
+Process poller at 300 ms (Win32_Process), times are guest local time. Only processes created after the flow started:
+
+16:44:11.530 pid=8136 ppid=7904 powershell.exe   (the WUA COM flow script)
+16:44:37.337 pid=2316 ppid=4760 wuaucltcore.exe | "C:\WINDOWS\uus\packages\preview\AMD64\wuaucltcore.exe"
+             /DeploymentHandlerFullPath \\?\C:\Windows\UUS\Packages\Preview\AMD64\UpdateDeploy.dll
+             /ClassId 24c49901-a226-4e9b-af65-797bf9c329d0 /RunHandlerComServer
+No TiWorker.exe, dism.exe, wusa.exe or msiexec.exe was started by the install (the CBS work ran in-process: CBS.log shows
+sessions "initialized by client UpdateAgentLCU").
+
+Windows Update COM results:  DOWNLOAD result=2 (21 s), INSTALL result=2 hr=0x00000000 reboot=True (115 s).
+Files in SoftwareDistribution\Download\<session>\ : ActionList.xml (1,146 B, generated), DotNetServicingCompDB_KB5126052.xml.cab
+(10,891 B), Windows11.0-KB5126052-x64-NDP481.cab (96,649,380 B), windlp.state.xml, Metadata\DeviceInventory.xml (831,500 B,
+generated), Metadata\DotNetServicingCompDB_KB5126052.xml (extracted CompDB).
+
+Earlier native install of the cumulative update KB5129195 (26100.9457) on the same guest, working directory listing:
+  916031e1-9d13-48e9-a262-c8a0db93fbac.AggregatedMetadata.cab  2,799,173
+  DesktopDeployment.cab                                       13,590,485
+  SSU-26100.9441-x64.cab                                      20,623,941
+  Windows11.0-KB5043080-x64.wim                              113,666,182
+  Windows11.0-KB5129195-x64.mumx.esd                         114,384,136
+  Windows11.0-KB5124015-x64.cab                              170,798,447
+  PFL_Package_for_RollupFix~~amd64~~26100.9457.1.0.xml         6,835,185 (generated)
+  extended_PFL_Package_for_RollupFix~~amd64~~26100.9457.1.0.xml 2,292,993 (generated)
+  ActionList.xml 5,533 (generated); windlp.state.xml 7,400 (generated)
+  = about 455 MB fetched, against 14.3 GB declared in the update's file list.

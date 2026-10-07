@@ -1,0 +1,17 @@
+{
+  "frame_request": 18,
+  "frame_response": 20,
+  "method": "POST",
+  "path": "/ClientWebService/client.asmx",
+  "request_body_bytes": 1735,
+  "request_body_sha256": "b2d4ec8163cfede778c6b95c3d98729445ce1874c827b47932538422eb073ca9",
+  "request_body_size": 1741,
+  "response_body_bytes": 298,
+  "response_body_sha256": "676ae1bdfd80f3cecb5acbb9e94a191bdd5604519d7780ca90f4ae2b50c33f8a",
+  "response_body_size": 298,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/RegisterComputer\"",
+  "status": 200,
+  "wire_response_content_encoding": "Content-Encoding: xpress",
+  "wire_response_content_length": 235
+}

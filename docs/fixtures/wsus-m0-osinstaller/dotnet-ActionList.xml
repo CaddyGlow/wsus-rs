@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ActionList xmlns="urn:schemas-microsoft-com:os-update-actionlist" SessionId="2026-10-05T16:44:27" Revision="1" SessionData="DesktopServicing" BuildInfo="ge_release.26200.1.250630-1000" CorrelationVector="PNaopMz8AU+dx4uM.2.0.0.8.1" Operation="DesktopServicing">
+    <Downloads>
+        <Package Id="Package_for_DotNetRollup_481" Reason="GDR" FeatureId="GDR_KB5126052">
+            <Payload PayloadType="Canonical" Hash="XFtD16tq5EM+RDzd74oy1q8elhsjz6Aa12uF/UAHjgI=" DownloadSize="96649380" SourceName="Windows11.0-KB5126052-x64-NDP481.cab"/>
+        </Package>
+    </Downloads>
+    <Plan>
+        <InstallFeature Id="GDR_KB5126052" Group="Microsoft"/>
+    </Plan>
+    <Actions>
+        <InstallPackage Keyform="Package_for_DotNetRollup_481~~amd64~~10.0.9347.1" InstalledSize="425655775" StagedSize="0" FilePath="Windows11.0-KB5126052-x64-NDP481.cab" Reason="GDR" FeatureId="GDR_KB5126052" Partition="MainOS" BinaryPartition="false">
+            <InstallPayload FilePath="Windows11.0-KB5126052-x64-NDP481.cab" PayloadType="Canonical"/>
+        </InstallPackage>
+    </Actions>
+</ActionList>

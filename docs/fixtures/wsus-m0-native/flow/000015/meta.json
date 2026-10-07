@@ -1,0 +1,17 @@
+{
+  "frame_request": 92,
+  "frame_response": 94,
+  "method": "POST",
+  "path": "/ClientWebService/client.asmx",
+  "request_body_bytes": 2819,
+  "request_body_sha256": "0f3a23c2208861576a956f84c6704caaaf91de09729c8a87cf0f255fcda82d09",
+  "request_body_size": 2822,
+  "response_body_bytes": 18399,
+  "response_body_sha256": "118dcd6e614824c083f13a2d01c1588083bdf3e15b4409105b35f216c2d1f7cc",
+  "response_body_size": 18408,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/GetExtendedUpdateInfo\"",
+  "status": 200,
+  "wire_response_content_encoding": "Content-Encoding: xpress",
+  "wire_response_content_length": 4126
+}

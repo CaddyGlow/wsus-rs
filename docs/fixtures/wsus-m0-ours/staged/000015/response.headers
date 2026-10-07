@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+content-type: text/xml; charset=utf-8
+content-length: 665
+cache-control: private, max-age=0
+vary: Accept-Encoding
+date: Sun, 04 Oct 2026 18:21:18 GMT
+

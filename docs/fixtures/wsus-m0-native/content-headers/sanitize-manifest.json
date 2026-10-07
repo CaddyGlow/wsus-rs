@@ -1,0 +1,149 @@
+{
+  "tool": "sanitize-capture.py",
+  "version": 1,
+  "exchanges": [
+    {
+      "exchange": "whole-file-single-range",
+      "files": {
+        "request.headers": {
+          "original_sha256": "db095ee6b7d000380f38ed049c1dd1ed5c82416a5e013f0b4a945d6dbf2cdb2f",
+          "original_size": 272,
+          "sanitized_sha256": "e5f6c2d4016ff6acb26820ce642cbc0dc5d39836fb223f025564564a7852df8d",
+          "sanitized_size": 269,
+          "changed": true
+        },
+        "request.redactions": {
+          "explicit_value": 1
+        },
+        "response.headers": {
+          "original_sha256": "cf4d6f15128beb0b9b43bb7f6d917cc27327262a4c6c0937beb0351ae9c2b9c8",
+          "original_size": 316,
+          "sanitized_sha256": "cf4d6f15128beb0b9b43bb7f6d917cc27327262a4c6c0937beb0351ae9c2b9c8",
+          "sanitized_size": 316,
+          "changed": false
+        },
+        "response.redactions": {},
+        "meta.json": {
+          "original_sha256": "4dbbb2b4bd9a0e270735012f7d4f12121572c6999fe58fdfc8547bcbf1247cf9",
+          "sanitized_sha256": "7a60d6f8bd202af6f40fedb3abe6963ca77cb0e2993d3ceea71e4e965b2995ad"
+        },
+        "original_body_hashes_recorded_in_raw_meta": {
+          "request": null,
+          "response": null
+        }
+      }
+    },
+    {
+      "exchange": "first-range-by-offset",
+      "files": {
+        "request.headers": {
+          "original_sha256": "a84708141d535086035c2cedf7a39eda1c5232aa3504fb198f5f72f13db59929",
+          "original_size": 274,
+          "sanitized_sha256": "d960228e5f4c9b9e1a7a249884b6e528267bb23dda0d1355b5207258007c8fe3",
+          "sanitized_size": 271,
+          "changed": true
+        },
+        "request.redactions": {
+          "explicit_value": 1
+        },
+        "response.headers": {
+          "original_sha256": "19f3f68d7b45fd9567e8ce36ce4d8814cf44b166fcd6c0bfe97ccf543a1c39f5",
+          "original_size": 322,
+          "sanitized_sha256": "19f3f68d7b45fd9567e8ce36ce4d8814cf44b166fcd6c0bfe97ccf543a1c39f5",
+          "sanitized_size": 322,
+          "changed": false
+        },
+        "response.redactions": {},
+        "meta.json": {
+          "original_sha256": "e5e0aed249b1eee6fb69f776845d95fbdf8d25f0c9aaee2585d6debbd5a3b286",
+          "sanitized_sha256": "8ba031238092b7168ecf8226a2c85db9feaadb9c1fc5a2847c557d73f7b80e78"
+        },
+        "original_body_hashes_recorded_in_raw_meta": {
+          "request": null,
+          "response": null
+        }
+      }
+    },
+    {
+      "exchange": "middle-range",
+      "files": {
+        "request.headers": {
+          "original_sha256": "d64704c01908ded3ede02e71ef06bb1d7c65339441189b1d8b85cf8ece3f01b8",
+          "original_size": 285,
+          "sanitized_sha256": "aae2b3ba0e9be090284799808bf1b1204c4f54fac9add57081195f13e7656a28",
+          "sanitized_size": 282,
+          "changed": true
+        },
+        "request.redactions": {
+          "explicit_value": 1
+        },
+        "response.headers": {
+          "original_sha256": "4a0e93d9b2e3df2209634c0ad1af24e1000ec7b63535872059df361c66ed15ff",
+          "original_size": 332,
+          "sanitized_sha256": "4a0e93d9b2e3df2209634c0ad1af24e1000ec7b63535872059df361c66ed15ff",
+          "sanitized_size": 332,
+          "changed": false
+        },
+        "response.redactions": {},
+        "meta.json": {
+          "original_sha256": "7fef882a2d4c55e63eb0dfd8de826195575b239d2e98ea1eb6ad6d96039c2671",
+          "sanitized_sha256": "e8d3002786c717b046f7ee56b1d623111223b2abde18dc3df7d4837a699921c4"
+        },
+        "original_body_hashes_recorded_in_raw_meta": {
+          "request": null,
+          "response": null
+        }
+      }
+    },
+    {
+      "exchange": "final-range",
+      "files": {
+        "request.headers": {
+          "original_sha256": "bbd93835a07e72ebf1274bd6408a46650b4de24337fa31dd8569ad24e2ed0fb7",
+          "original_size": 285,
+          "sanitized_sha256": "93616d525940818a5254c1bf86098004d941a79abd98a738ad6937d0ef5ff4ad",
+          "sanitized_size": 282,
+          "changed": true
+        },
+        "request.redactions": {
+          "explicit_value": 1
+        },
+        "response.headers": {
+          "original_sha256": "527dd96a0de8b48a325df4571c4ea82a73d71e180ab7e0e73b87173458d2a5b4",
+          "original_size": 331,
+          "sanitized_sha256": "527dd96a0de8b48a325df4571c4ea82a73d71e180ab7e0e73b87173458d2a5b4",
+          "sanitized_size": 331,
+          "changed": false
+        },
+        "response.redactions": {},
+        "meta.json": {
+          "original_sha256": "134932783bd1ffd19febb59a92ea9bc82321eb51d56e0a818776dd3a64a72f50",
+          "sanitized_sha256": "53cfca7acd69369d8c4678c6f94f97f89753ffd72a532e0bb93d0400770f2229"
+        },
+        "original_body_hashes_recorded_in_raw_meta": {
+          "request": null,
+          "response": null
+        }
+      }
+    }
+  ],
+  "residual": [],
+  "redaction_totals": {
+    "explicit_value": 4
+  },
+  "settings": {
+    "redact_header_names": [
+      "authorization",
+      "cookie",
+      "proxy-authorization",
+      "set-cookie"
+    ],
+    "redact_element_names": [
+      "EncryptedData",
+      "CookieData",
+      "Password"
+    ],
+    "explicit_redact_value_count": 2,
+    "kept_query_params": []
+  }
+}

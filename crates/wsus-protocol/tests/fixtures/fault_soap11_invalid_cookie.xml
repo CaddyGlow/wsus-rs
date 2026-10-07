@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Client</faultcode>
+      <faultstring>Fault occurred</faultstring>
+      <faultactor>http://wsus.example.test/ClientWebService/Client.asmx</faultactor>
+      <detail>
+        <ErrorCode>InvalidCookie</ErrorCode>
+        <Message>cookie rejected</Message>
+        <ID>6e8d0c3a-3f1e-4b66-9d3e-0a1b2c3d4e5f</ID>
+        <Method>"http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates"</Method>
+      </detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>

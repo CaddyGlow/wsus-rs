@@ -1,0 +1,17 @@
+{
+  "frame_request": 22,
+  "frame_response": 24,
+  "method": "POST",
+  "path": "/ClientWebService/client.asmx",
+  "request_body_bytes": 396,
+  "request_body_sha256": "7ce5bc64b001838be5b965d77e100dc8e8c7cd058eedd99b3146afa33dbfb386",
+  "request_body_size": 396,
+  "response_body_bytes": 420,
+  "response_body_sha256": "f5bb92400cc6811a308b674f085dff7e53701321456937d0fd91a2685f55a1e8",
+  "response_body_size": 420,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/StartCategoryScan\"",
+  "status": 200,
+  "wire_response_content_encoding": "Content-Encoding: xpress",
+  "wire_response_content_length": 318
+}

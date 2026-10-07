@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.352,
+    "time_to_first_response_byte": 0.919,
+    "total": 1.082,
+    "upstream_connect": 0.175
+  },
+  "error": null,
+  "exchange": 15,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ServerSyncWebService/ServerSyncWebService.asmx",
+  "request_body_bytes": 760,
+  "request_body_sha256": "0f33da2fb5366725cad83a6358b2c52b4330a337fb57696801b46bd807bd4c8f",
+  "response_body_bytes": 2217,
+  "response_body_sha256": "d30eacf3e9e4a5329529490a51c693879e11ad2911f93108f4bd6c6a5c3988bc",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/GetUpdateData",
+  "status": 200,
+  "timestamp": "2026-10-04T16:33:26.855+00:00",
+  "upstream_body_ms": 0.069
+}

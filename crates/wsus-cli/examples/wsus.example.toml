@@ -1,0 +1,91 @@
+# Example configuration for the `wsus` command line.
+#
+# Relative paths are resolved against the directory of this file. Unknown keys
+# are rejected. The file holds no secrets. Evidence status: this configuration
+# is exercised against this workspace's own client and server; the [upstream]
+# section was also run once against a real lab WSUS (docs/wsus-validation.md C15
+# to C18). No native Windows Update client has used it.
+
+[network]
+# proxy = "http://proxy.example:3128"      # bare origin; proxy credentials are not supported
+# trust_roots = ["certs/extra-root.pem"]   # extra PEM roots (applied to client and upstream)
+
+[client]
+origin = "http://127.0.0.1:8530"
+state_dir = "client"
+dns_name = "client1.example.invalid"
+# target_group = "Lab"
+request_timeout_secs = 60
+max_retries = 3
+# accept_xpress = true    # send Accept-Encoding: xpress on SOAP requests
+max_concurrent_downloads = 4
+max_file_size_bytes = 68719476736
+# filter_categories = ["00000000-0000-0000-0000-000000000000"]
+
+[client.computer]            # declared, not detected
+os_major = 10
+os_minor = 0
+os_build = 26100
+locale = "en-US"
+processor_architecture = "9"
+
+[server]
+listen = "127.0.0.1:8530"    # plain HTTP only; keep on loopback or behind a TLS proxy
+database = "server/wsus.sqlite"
+content_dir = "server/content"
+source_name = "upstream"     # catalog source whose active generation is served
+advertised_content_url = "http://127.0.0.1:8530"   # origin of file URLs given to clients
+max_request_bytes = 4194304
+max_array_len = 50000
+max_sync_new_updates = 30    # NewUpdates per SyncUpdates response (the real WSUS returns 30)
+sync_delivery = "staged"     # "staged": real-WSUS-like, driven by InstalledNonLeafUpdateIDs, advertises
+                             #   ProtocolVersion 3.2 and answers StartCategoryScan
+                             # "closure": whole approved closure at once, 200 per page when
+                             #   max_sync_new_updates is unset, advertises 3.0. Neither is verified
+                             #   against a native Windows Update Agent.
+delivery_scope = "approved"  # which updates a computer is offered (orthogonal to sync_delivery):
+                             # "approved": approved updates plus their prerequisite, category and bundle
+                             #   closure (default; PreDeploymentCheck is never emitted)
+                             # "all_non_declined": every non-declined update, as a real WSUS delivers, so
+                             #   clients evaluate and report unapproved updates; unapproved software is
+                             #   marked PreDeploymentCheck (bundle members Bundle). Needs a few GB of RAM
+                             #   to build the index for a Windows catalog on the first request.
+# protocol_version = "3.2"   # override the advertised ProtocolVersion
+# max_installed_non_leaf_ids = 400   # staged: cap on InstalledNonLeafUpdateIDs (real WSUS: 400)
+# out_of_scope_unsatisfied = true    # staged: cached revisions with unsatisfied prerequisites go out of scope
+max_extended_updates_per_request = 50
+max_file_digests_per_request = 100
+max_events_per_batch = 500
+# xpress_responses = true   # Content-Encoding: xpress for clients that send Accept-Encoding: xpress
+allowed_event_ids = []       # empty allows every event id
+# cookie_ttl_secs = 14400
+# auth_cookie_ttl_secs = 86400
+
+# Upstream WSUS for `wsus admin sync start`. Remove the section for a server
+# whose catalog is filled another way. Against the lab WSUS (Windows Server 2025
+# 10.0.26100, 2026-10-04) these two ids selected the Defender definition updates;
+# find the ids of another upstream with scripts/wsus/probe-wsusss.py categories.
+# [upstream]
+# origin = "http://upstream.example.invalid:8530"
+# endpoint_key = "lab-wsus"           # changing it forces a full resynchronization
+# account_name = "wsus-cli.example.invalid"
+# account_guid = "00000000-0000-0000-0000-000000000000"
+# content_base_url = "http://upstream.example.invalid:8530"   # default: origin
+# download_files_fallback = true      # false leaves the upstream untouched
+# products = ["8c3fcc84-7410-4a95-8b89-a166a0190486"]          # Microsoft Defender Antivirus
+# classifications = ["e0789628-ce08-4437-be74-2495b842f43b"]   # Definition Updates
+# send_wire_filter = true             # sent only when both lists are non-empty
+# keep_superseded_generations = 2
+# request_timeout_secs = 300
+
+[logging]
+level = "info"               # or e.g. "wsus_cli=debug"
+format = "text"              # "text" or "json"
+
+# The installing client (`wsus client install`). Not validated against Windows.
+[install]
+# Allowed payload signers (organisation of the signing certificate). The
+# command-line option --trust-signer replaces this list for one run.
+trust_signers = ["Microsoft Corporation"]
+timeout_secs = 1800
+post_check_wait_secs = 180   # wait for the evaluator to say installed after the last step; 0 disables

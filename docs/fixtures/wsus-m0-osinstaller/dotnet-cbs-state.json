@@ -1,0 +1,26 @@
+{
+  "note": "Registry and DISM state of Package_for_DotNetRollup_481 10.0.9347.1 recorded on Windows 11 25H2 UBR 8037 guests, OBSERVED 2026-10-05. CurrentState values: 112 installed, 96 and 64 install pending (DISM add and native agent), 80 superseded, 5 uninstall pending.",
+  "base": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Component Based Servicing",
+  "package": "Package_for_DotNetRollup_481~31bf3856ad364e35~amd64~~10.0.9347.1",
+  "old_package": "Package_for_DotNetRollup_481~31bf3856ad364e35~amd64~~10.0.9321.3",
+  "states": [
+    {
+      "name": "native agent, before reboot",
+      "package_current_state": 64, "old_current_state": 112, "install_client": "UpdateAgentLCU",
+      "packages_pending_subkeys": 0, "reboot_pending": true, "sessions_pending": true, "wu_reboot_required": true,
+      "pending_xml": false, "dism_state": "Install Pending"
+    },
+    {
+      "name": "native agent, after reboot",
+      "package_current_state": 112, "old_current_state": 80, "install_client": "UpdateAgentLCU",
+      "packages_pending_subkeys": 0, "reboot_pending": false, "sessions_pending": true, "wu_reboot_required": false,
+      "pending_xml": false, "dism_state": "Installed"
+    },
+    {
+      "name": "dism /Add-Package, before reboot",
+      "package_current_state": 96, "old_current_state": 5, "install_client": "DISM Package Manager Provider",
+      "packages_pending_subkeys": 38, "packages_pending_lists_package": true, "reboot_pending": true, "sessions_pending": true,
+      "wu_reboot_required": false, "pending_xml": true, "dism_state": "Install Pending"
+    }
+  ]
+}

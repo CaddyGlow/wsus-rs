@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.622,
+    "time_to_first_response_byte": 94.341,
+    "total": 105.694,
+    "upstream_connect": 0.344
+  },
+  "error": null,
+  "exchange": 4,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ClientWebService/Client.asmx",
+  "request_body_bytes": 1408,
+  "request_body_sha256": "4737190e080532d6959e0ab97b7793d68fddc4375c4f66f96f8299795ec9794b",
+  "response_body_bytes": 298,
+  "response_body_sha256": "676ae1bdfd80f3cecb5acbb9e94a191bdd5604519d7780ca90f4ae2b50c33f8a",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/RegisterComputer",
+  "status": 200,
+  "timestamp": "2026-10-04T14:49:06.005+00:00",
+  "upstream_body_ms": 11.145
+}

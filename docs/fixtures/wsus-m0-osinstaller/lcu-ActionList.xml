@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ActionList xmlns="urn:schemas-microsoft-com:os-update-actionlist" SessionId="2026-10-05T12:33:59" Revision="1" SessionData="DesktopServicing" BuildInfo="ge_release.26100.1.240331-1435" CorrelationVector="SjzJXbqy0UKOn+fv.1.1.19.1" Operation="DesktopServicing">
+    <Downloads>
+        <Package Id="Package_for_RollupFix~~amd64~~26100.9457.1.0" Reason="CumulativeUpdate" FeatureId="CumulativeUpdate_KB5129195" PackagePath="Package_for_RollupFix~~amd64~~26100.9457.1.0" ExpressPackagePath="metadata\Windows11.0-KB5129195-x64">
+            <Payload PayloadType="Express" Hash="Q3OPqsgqr7OXWtgegsPnOJQCNuvcENTWBcF66gi8zb8=" DownloadSize="113666182" SourceName="Windows11.0-KB5043080-x64.wim" AltSourceName="Windows11.0-KB5043080-x64.msu" AltSourceCiXPath="Windows11.0-KB5043080-x64.msu.cix.xml" AltSourceHash="gZYyYQoQGvEccpB/sT/wW1+0IiwOJj7poDvMHR1fJqQ=" ExpressHash="w0b6IVdmFyHFMIpANbFyv6V2wnjcBvi3gJW1BPr4b8s=" ExpressSourceName="Windows11.0-KB5043080-x64.psf" ExpressTargetName="Windows11.0-KB5043080-x64_psf.rng" CiXPath="Windows11.0-KB5043080-x64\express.psf.cix.xml" ExpressPackagePath="metadata\Windows11.0-KB5043080-x64" ExpressPackageTargetPath="Windows11.0-KB5043080-x64"/>
+            <Payload PayloadType="Express" Hash="EFrQX+x/u/SIJdl7kmAtfV7aVtJgU3Hi252Kse3+7Gw=" DownloadSize="114384136" SourceName="Windows11.0-KB5129195-x64.mumx.esd" AltSourceName="Windows11.0-KB5129195-x64.msu" AltSourceCiXPath="Windows11.0-KB5129195-x64.msu.cix.xml" AltSourceHash="sz/3qrW7u7c4Z/P1wvSS/pfAEpuWqhlBvCcGENeHbfo=" ExpressHash="uoqzPLNzolTbYByIZ33HpF+IOUGnhjR8uem60VLZVK0=" ExpressSourceName="Windows11.0-KB5129195-x64.psf" ExpressTargetName="Windows11.0-KB5129195-x64_psf.rng" CiXPath="Windows11.0-KB5129195-x64\express.psf.cix.xml" ExpressPackagePath="metadata\Windows11.0-KB5129195-x64"/>
+        </Package>
+        <Package Id="Package_for_SafeOSDU" Reason="SafeOSDU" FeatureId="SafeOSUpdate_KB5124015">
+            <Payload PayloadType="PSFX" Hash="ZSvrj/b6rTXk7bMUAGzAByctke1z0bfk6wfuFBw2kH8=" DownloadSize="170798447" SourceName="Windows11.0-KB5124015-x64.cab"/>
+        </Package>
+        <Package Id="Package_for_ServicingStack_9441" Reason="ServicingStackUpdate" FeatureId="ServicingStackUpdate_KB5124007">
+            <Payload PayloadType="Canonical" Hash="nMEbNOhUZktiWfOYk5BrCwOV0ASqTjmnbxl4jeZM77M=" DownloadSize="20623941" SourceName="SSU-26100.9441-x64.cab" AltSourceName="Windows11.0-KB5129195-x64.msu" AltSourceCiXPath="Windows11.0-KB5129195-x64.msu.cix.xml" AltSourceHash="sz/3qrW7u7c4Z/P1wvSS/pfAEpuWqhlBvCcGENeHbfo="/>
+        </Package>
+    </Downloads>
+    <Plan>
+        <InstallFeature Id="CumulativeUpdate_KB5043080" Group="Microsoft"/>
+        <InstallFeature Id="CumulativeUpdate_KB5129195" Group="Microsoft"/>
+        <InstallFeature Id="SafeOSUpdate_KB5124015" Group="Microsoft"/>
+        <InstallFeature Id="ServicingStackUpdate_KB5124007" Group="Microsoft"/>
+    </Plan>
+    <Actions>
+        <InstallFeature Id="DirectX.Configuration.Database~~1.0" Group="Microsoft">
+            <Intent value="AVOID"/>
+        </InstallFeature>
+        <RemoveFeature Id="DirectX.Configuration.Database~~1.0" Group="Microsoft">
+            <Intent value="USER"/>
+        </RemoveFeature>
+        <InstallPackage Keyform="Package_for_RollupFix~~amd64~~26100.1742.1.10" InstalledSize="9271877801" StagedSize="0" PayloadType="Express" FilePath="Package_for_RollupFix~~amd64~~26100.1742.1.10" Action="StagePartial" ExpressPackagePath="metadata\Windows11.0-KB5043080-x64" Reason="CumulativeUpdate" FeatureId="CumulativeUpdate_KB5043080" Partition="MainOS" BinaryPartition="false">
+            <InstallPayload FilePath="Windows11.0-KB5043080-x64.wim" ExpressPackagePath="metadata\Windows11.0-KB5043080-x64" PayloadType="Express"/>
+        </InstallPackage>
+        <InstallPackage Keyform="Package_for_RollupFix~~amd64~~26100.9457.1.0" InstalledSize="9999999999" StagedSize="0" PayloadType="Express" FilePath="Package_for_RollupFix~~amd64~~26100.9457.1.0" ExpressPackagePath="metadata\Windows11.0-KB5129195-x64" ExpressMetadataContainerPath="Windows11.0-KB5129195-x64.mumx.esd" Reason="CumulativeUpdate" FeatureId="CumulativeUpdate_KB5129195" Partition="MainOS" BinaryPartition="false">
+            <InstallPayload FilePath="Windows11.0-KB5043080-x64.wim" ExpressPackagePath="metadata\Windows11.0-KB5043080-x64" ExpressMetadataContainerPath="Windows11.0-KB5043080-x64.wim" PayloadType="Express"/>
+            <InstallPayload FilePath="Windows11.0-KB5129195-x64.mumx.esd" ExpressPackagePath="metadata\Windows11.0-KB5129195-x64" ExpressMetadataContainerPath="Windows11.0-KB5129195-x64.mumx.esd" PayloadType="Express"/>
+        </InstallPackage>
+        <InstallPackage Keyform="Package_for_SafeOSDU~~amd64~~26100.9444.1.29" InstalledSize="908139998" StagedSize="0" FilePath="Windows11.0-KB5124015-x64.cab" Reason="SafeOSDU" FeatureId="SafeOSUpdate_KB5124015" Partition="WinRE" BinaryPartition="false">
+            <InstallPayload FilePath="Windows11.0-KB5124015-x64.cab" PayloadType="PSFX"/>
+        </InstallPackage>
+        <InstallPackage Keyform="Package_for_ServicingStack_9441~~amd64~~26100.9441.1.11" InstalledSize="73675207" StagedSize="0" FilePath="SSU-26100.9441-x64.cab" Reason="ServicingStackUpdate" FeatureId="ServicingStackUpdate_KB5124007" Partition="MainOS" BinaryPartition="false">
+            <InstallPayload FilePath="SSU-26100.9441-x64.cab" PayloadType="Canonical"/>
+        </InstallPackage>
+    </Actions>
+</ActionList>

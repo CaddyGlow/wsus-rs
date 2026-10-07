@@ -1,0 +1,17 @@
+{
+  "frame_request": 101,
+  "frame_response": 103,
+  "method": "POST",
+  "path": "/ReportingWebService/ReportingWebService.asmx",
+  "request_body_bytes": 16629,
+  "request_body_sha256": "dd7f46437ea6745b9aa59aa38280f330038a5fcce42b8381e85e212a7f21dcd5",
+  "request_body_size": 16632,
+  "response_body_bytes": 406,
+  "response_body_sha256": "2e7312a089bb2916c3b5005167ed853d2d933f11fd49a28cb38236182e70e6be",
+  "response_body_size": 406,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/ReportEventBatch\"",
+  "status": 200,
+  "wire_response_content_encoding": "Content-Encoding: xpress",
+  "wire_response_content_length": 275
+}

@@ -1,0 +1,9 @@
+POST /ServerSyncWebService/ServerSyncWebService.asmx HTTP/1.1
+Accept-Encoding: identity
+Content-Length: 284
+Host: 127.0.0.1:18551
+User-Agent: Python-urllib/3.13
+Content-Type: text/xml; charset=utf-8
+Soapaction: "http://www.microsoft.com/SoftwareDistribution/GetRevisionIdList"
+Connection: close
+

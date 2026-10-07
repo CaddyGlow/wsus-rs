@@ -1,0 +1,5 @@
+<Properties DefaultPropertiesLanguage="en" MsrcSeverity="Important" MaxDownloadSize="1234" />
+<Files>
+  <File FileName="update.cab" Size="1234" Modified="2024-01-01T00:00:00.000" Digest="AAECAwQFBgcICQoLDA0ODxAREhM=" DigestAlgorithm="SHA1" PatchingType="None" />
+</Files>
+<HandlerSpecificData type="ns:Foo"><Thing a="1" /></HandlerSpecificData>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <GetConfigResponse xmlns="http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService">
+      <GetConfigResult>
+        <LastChange>2024-05-01T10:20:30.123Z</LastChange>
+        <IsRegistrationRequired>false</IsRegistrationRequired>
+        <AuthInfo>
+          <AuthPlugInInfo>
+            <PlugInID>SimpleTargeting</PlugInID>
+            <ServiceUrl>SimpleAuthWebService/SimpleAuth.asmx</ServiceUrl>
+            <Parameter>Parameter</Parameter>
+          </AuthPlugInInfo>
+        </AuthInfo>
+        <AllowedEventIds>
+          <int>10</int>
+          <int>11</int>
+        </AllowedEventIds>
+        <Properties>
+          <ConfigurationProperty>
+            <Name>MaxExtendedUpdatesPerRequest</Name>
+            <Value>50</Value>
+          </ConfigurationProperty>
+        </Properties>
+      </GetConfigResult>
+    </GetConfigResponse>
+  </soap:Body>
+</soap:Envelope>

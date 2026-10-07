@@ -1,0 +1,60 @@
+name: wsus-rs fuzz
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 3 * * 1'
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: wsus-rs
+jobs:
+  fuzz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: wsus-rs
+      - uses: actions/checkout@v7
+        with:
+          repository: ${{ vars.MS_COMPRESS_REPOSITORY || format('{0}/ms-compress', github.repository_owner) }}
+          ref: ${{ vars.MS_COMPRESS_REF }}
+          path: ms-compress
+      - uses: dtolnay/rust-toolchain@1.99.0
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: fuzz
+          workspaces: |
+            wsus-rs -> target
+            wsus-rs/fuzz -> target
+      - name: Install native fuzz dependencies and runner
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential binutils-dev libunwind-dev liblzma-dev
+          cargo install honggfuzz --version 0.5.62 --locked
+      - name: Seed corpora
+        run: python3 fuzz/seed_wsus.py
+      - name: Instrumented smoke campaigns
+        working-directory: wsus-rs/fuzz
+        env:
+          HFUZZ_BUILD_ARGS: '--locked'
+          HFUZZ_RUN_ARGS: '-n 1 -t 5 -N 1000 --exit_upon_crash'
+          RUSTC_WRAPPER: ''
+          CARGO_INCREMENTAL: '0'
+          CC: gcc
+        run: |
+          export CARGO_TARGET_DIR="$GITHUB_WORKSPACE/wsus-rs/target/honggfuzz-gcc"
+          export HFUZZ_WORKSPACE="$GITHUB_WORKSPACE/wsus-rs/target/hfuzz_workspace"
+          for source in src/bin/*.rs; do
+            target="${source##*/}"
+            target="${target%.rs}"
+            test -d "corpus/$target" || continue
+            HFUZZ_INPUT="corpus/$target" cargo hfuzz run "$target"
+          done
+      - name: Preserve fuzz crash evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wsus-rs-fuzz-findings
+          path: wsus-rs/target/hfuzz_workspace

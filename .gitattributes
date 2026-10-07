@@ -1,0 +1,2 @@
+# Captured evidence must stay byte-exact: no line-ending conversion.
+docs/fixtures/** -text

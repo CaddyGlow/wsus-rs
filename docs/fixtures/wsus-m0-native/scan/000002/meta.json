@@ -1,0 +1,17 @@
+{
+  "frame_request": 9,
+  "frame_response": 11,
+  "method": "POST",
+  "path": "/SimpleAuthWebService/SimpleAuth.asmx",
+  "request_body_bytes": 310,
+  "request_body_sha256": "6d903f7c0c8a0815a3c7aa1d4438d3c58e485517eef8af68b01506da5b17c873",
+  "request_body_size": 316,
+  "response_body_bytes": 1179,
+  "response_body_sha256": "70cb047b887f2711dc9b242520877a107f6d01005b562ba10bf31869fec046f4",
+  "response_body_size": 1179,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/Server/SimpleAuthWebService/GetAuthorizationCookie\"",
+  "status": 200,
+  "wire_response_content_encoding": "Content-Encoding: xpress",
+  "wire_response_content_length": 1106
+}

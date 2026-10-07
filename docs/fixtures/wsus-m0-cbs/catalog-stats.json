@@ -1,0 +1,48 @@
+{
+  "provenance": "Windows 11 product (72e7624a-5b00-45d2-b92f-e561c0a6a160) synced on the lab WSUS (Windows Server 2025 10.0.26100, ProtocolVersion 3.2) on 2026-10-05, then synced by this project's client; statistics computed from the stored revisions",
+  "revisions_stored": 5253,
+  "revisions_visible": 5077,
+  "revisions_by_type_leaf_action_with_extended": {
+    "Detectoid Evaluate leaf": 3433,
+    "Detectoid Evaluate non-leaf": 277,
+    "Software Bundle leaf (Extended fetched)": 561,
+    "Software PreDeploymentCheck leaf (Extended fetched)": 441,
+    "Software Install leaf (Extended fetched)": 92,
+    "Category Evaluate non-leaf": 249,
+    "Category Evaluate leaf": 199
+  },
+  "handlers_in_extended_fragments": {
+    "http://schemas.microsoft.com/msus/2016/01/UpdateHandlers/OSInstaller": 297,
+    "http://schemas.microsoft.com/msus/2002/12/UpdateHandlers/Cbs": 180,
+    "http://schemas.microsoft.com/msus/2002/12/UpdateHandlers/CommandLineInstallation": 84,
+    "http://schemas.microsoft.com/msus/2002/12/UpdateHandlers/WindowsInstaller": 8
+  },
+  "cbs_updates": {
+    "count": 180,
+    "files_per_update": 1,
+    "file_extension": "cab",
+    "CbsData_PackageIdentity_empty": 180,
+    "InstallationBehavior_RebootBehavior": {"CanRequestReboot": 180},
+    "applicability": "IsInstalled CbsPackageInstalled, IsInstallable CbsPackageInstallable, Metadata CbsPackageApplicabilityMetadata (package manifest)",
+    "core_xml_bytes": {"min": 50662, "median": 167067, "max": 46887043}
+  },
+  "os_installer_updates": {
+    "count": 297,
+    "ProductName": {"Client.OS.RS2.ARM64": 120, "Client.OS.RS2.AMD64": 111, "Microsoft.NetFX.arm64": 36, "Microsoft.NetFX.amd64": 30},
+    "distinct_ReleaseVersion": 151,
+    "file_extensions": {"cab": 2114, "wim": 854, "psf": 698, "msu": 173},
+    "PatchingType": {"SelfContained": 3311},
+    "PatchingTypePreferred": {"Metadata": 297, "ServicingStack": 231},
+    "MaxDownloadSize_GB": {"min": 0.06, "median": 9.62, "max": 14.83},
+    "applicability": "IsInstalled ProductReleaseInstalled(Name, Version); IsInstallable DeviceAttribute (OSSkuId, sku, OSVersion)"
+  },
+  "device_attribute_uses": {
+    "OSSkuId": 747, "sku": 747, "OSVersion": 604, "ProductType": 198, "DL_OSVersion": 88,
+    "IsRemoteDesktopSessionHost": 66, "CurrentBranch": 9,
+    "comparisons": {"EqualTo": 1767, "GreaterThanOrEqualTo": 447, "LessThan": 245},
+    "ProductType_values": ["WinNT", "ServerNT", "LanmanNT"]
+  },
+  "relationships": {"Prerequisites_sections": 5143, "SupersededUpdates_sections": 633, "SupersededUpdates_edges": 16664, "BundledUpdates_sections": 525,
+    "bundle_child_handler": {"OSInstaller": 297, "Cbs": 144, "CommandLineInstallation": 84}},
+  "core_xml": {"documents": 5252, "total_MB": 1184, "p50_bytes": 563, "p99_bytes": 413358, "over_1MB": 46, "over_32MiB": 10, "max_bytes": 46887043}
+}

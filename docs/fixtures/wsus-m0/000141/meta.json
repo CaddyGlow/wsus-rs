@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.775,
+    "time_to_first_response_byte": 26.756,
+    "total": 27.005,
+    "upstream_connect": 0.37
+  },
+  "error": null,
+  "exchange": 141,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ClientWebService/Client.asmx",
+  "request_body_bytes": 67594,
+  "request_body_sha256": "f7d6394ee54749d29e78afaffa48a93d7aaf3f2dd8204adc4203e4a1e5118c97",
+  "response_body_bytes": 442,
+  "response_body_sha256": "68629cd338b115ebecb82d6a6da5f5c3fa49bd02dd398a522d4da517044efd34",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates",
+  "status": 500,
+  "timestamp": "2026-10-04T14:50:50.800+00:00",
+  "upstream_body_ms": 0.085
+}

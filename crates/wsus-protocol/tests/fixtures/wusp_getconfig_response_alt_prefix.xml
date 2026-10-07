@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Envelope xmlns:e="http://schemas.xmlsoap.org/soap/envelope/">
+  <e:Body>
+    <c:GetConfigResponse xmlns:c="http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService">
+      <c:GetConfigResult>
+        <c:LastChange>2024-05-01T10:20:30Z</c:LastChange>
+        <c:IsRegistrationRequired>1</c:IsRegistrationRequired>
+        <c:AllowedEventIds><c:int>7</c:int></c:AllowedEventIds>
+      </c:GetConfigResult>
+    </c:GetConfigResponse>
+  </e:Body>
+</e:Envelope>

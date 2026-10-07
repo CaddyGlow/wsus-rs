@@ -1,0 +1,21 @@
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2026-09-12 06:41:40 ....A      4437464               UpdateAgent.dll
+2026-09-12 07:09:54 ....A      1095120               dpx.dll
+2026-09-12 10:00:18 ....A       714216               Mitigation.dll
+2026-09-12 06:52:08 ....A       153072               UAOneSettings.dll
+2026-09-12 07:03:26 ....A      4543976               wcp.dll
+2026-09-12 06:41:28 ....A      2332136               TurboStack.dll
+2026-09-12 06:41:42 ....A       349680               ReserveManager.dll
+2026-09-12 09:43:34 ....A       841168               WinREAgent.dll
+2026-09-12 06:41:28 ....A       615920               UpdateCompression.dll
+2026-09-12 06:46:04 ....A       718296               updatedeploy.dll
+2026-09-12 07:03:20 ....A      1025536               AppxDeviceInventory.dll
+2026-09-12 07:09:56 ....A       865752               MsixPackageProvisioner.dll
+2026-09-12 07:10:02 ....A        91600               featurestaging.dll
+2026-09-12 06:41:30 ....A      1410520               turbocontainer.dll
+2026-09-12 05:14:36 ....A      5424880               Deployment.cab
+------------------- ----- ------------ ------------  ------------------------
+2026-09-12 10:00:18           24619336     13590485  15 files
+
+Warnings: 1

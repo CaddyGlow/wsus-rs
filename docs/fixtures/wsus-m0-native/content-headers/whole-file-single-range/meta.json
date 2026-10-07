@@ -1,0 +1,9 @@
+{
+  "frame_request": 23,
+  "frame_response": 54,
+  "method": "GET",
+  "path": "/Content/F8/6103D9F6BF95C772C8B7EE89AEE370CDCA4642F8.exe",
+  "sanitized": true,
+  "status": 206,
+  "bodies": "not retained (request body empty; 206 response body omitted)"
+}

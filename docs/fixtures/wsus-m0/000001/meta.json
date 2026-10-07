@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.556,
+    "time_to_first_response_byte": 818.225,
+    "total": 818.516,
+    "upstream_connect": 0.281
+  },
+  "error": null,
+  "exchange": 1,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ClientWebService/Client.asmx",
+  "request_body_bytes": 286,
+  "request_body_sha256": "6760b7b82ad0f18a24fecf8f072d1418d6261639e6b5c6454f53b94889b66b99",
+  "response_body_bytes": 1150,
+  "response_body_sha256": "f8b0ef3ade144d4a7281bd5c614096b8abb7f5146105bf426080fce92071d83b",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/GetConfig",
+  "status": 200,
+  "timestamp": "2026-10-04T14:49:04.477+00:00",
+  "upstream_body_ms": 0.091
+}

@@ -1,0 +1,11 @@
+HTTP/1.1 206 Partial Content
+Content-Type: application/octet-stream
+Last-Modified: Thu, 11 Jan 2024 20:39:44 GMT
+Accept-Ranges: bytes
+ETag: "0e8fc4ece44da1:0"
+Server: Microsoft-IIS/10.0
+X-Powered-By: ASP.NET
+Date: Sun, 04 Oct 2026 15:55:41 GMT
+Content-Length: 918944
+Content-Range: bytes 0-918943/918944
+

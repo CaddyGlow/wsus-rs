@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><GetAuthorizationCookie xmlns="http://www.microsoft.com/SoftwareDistribution/Server/SimpleAuthWebService"><clientId>992ff43e-9bbb-4e77-a850-9d01d0e632b4</clientId><dnsName>host3.invalid</dnsName></GetAuthorizationCookie></soap:Body></soap:Envelope>

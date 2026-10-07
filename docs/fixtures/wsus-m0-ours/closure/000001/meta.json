@@ -1,0 +1,21 @@
+{
+  "content_exchange": false,
+  "frame_request": 6,
+  "frame_response": 8,
+  "method": "POST",
+  "path": "/ClientWebService/client.asmx",
+  "request_body_bytes": 234,
+  "request_body_sha256": "2ad8a46e4ec9af473669ede53d125f16747a1ed3dd8c916dbb7bd10ff19fc1d0",
+  "request_body_size": 234,
+  "response_body_bytes": 970,
+  "response_body_sha256": "8d0d416d4afbdab2697f037f87056372380b5964e8d51ecaaac95c5f67769212",
+  "response_body_size": 970,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/GetConfig\"",
+  "status": 200,
+  "t_request_s": 0.000262,
+  "t_response_s": 0.000553,
+  "tcp_stream": 0,
+  "wire_response_content_encoding": "xpress",
+  "wire_response_content_length": 555
+}

@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.5,
+    "time_to_first_response_byte": 2.599,
+    "total": 2.763,
+    "upstream_connect": 0.285
+  },
+  "error": null,
+  "exchange": 624,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ServerSyncWebService/ServerSyncWebService.asmx",
+  "request_body_bytes": 710,
+  "request_body_sha256": "ee76787db7189d9162bc7e5a3e47b343365f7360f9defd3ce396b743842ac6ea",
+  "response_body_bytes": 467,
+  "response_body_sha256": "7f131279f8e05c179b9bdfa3a2dc4da84838f93f68b442fa40b4412ca3c17a8c",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/GetRevisionIdList",
+  "status": 200,
+  "timestamp": "2026-10-04T16:25:43.792+00:00",
+  "upstream_body_ms": 0.062
+}

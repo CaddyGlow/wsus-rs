@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><GetAuthorizationCookie xmlns="http://www.microsoft.com/SoftwareDistribution/Server/DssAuthWebService"><accountName>ours.lab.invalid</accountName><accountGuid>6f1c2f6e-3f0b-4d3a-9b1e-0d2f6a1c5e11</accountGuid></GetAuthorizationCookie></soap:Body></soap:Envelope>

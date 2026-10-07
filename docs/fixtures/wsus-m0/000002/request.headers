@@ -1,0 +1,7 @@
+POST /SimpleAuthWebService/SimpleAuth.asmx HTTP/1.1
+content-type: text/xml; charset=utf-8
+soapaction: "http://www.microsoft.com/SoftwareDistribution/Server/SimpleAuthWebService/GetAuthorizationCookie"
+accept: */*
+host: host1.invalid
+content-length: 367
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Update xmlns="http://schemas.microsoft.com/msus/2002/12/Update" xmlns:lar="http://schemas.microsoft.com/msus/2002/12/LogicalApplicabilityRules" xmlns:bar="http://schemas.microsoft.com/msus/2002/12/BaseApplicabilityRules" xmlns:msiar="http://schemas.microsoft.com/msus/2002/12/MsiApplicabilityRules">
+  <UpdateIdentity UpdateID="44444444-4444-4444-8444-444444444444" RevisionNumber="3"/>
+  <Properties UpdateType="Software"/>
+  <ApplicabilityRules>
+    <IsInstalled>
+      <lar:And>
+        <bar:Processor Architecture="9"/>
+        <lar:Not><bar:RegKeyExists Key="HKEY_LOCAL_MACHINE" Subkey="SOFTWARE\Gone"/></lar:Not>
+        <msiar:MsiProductInstalled ProductCode="{E49CA583-2EC0-4510-862A-C2BEFD036330}"/>
+        <lar:Or><lar:False/><bar:WindowsVersion Comparison="EqualTo" MajorVersion="10" MinorVersion="0"/></lar:Or>
+      </lar:And>
+    </IsInstalled>
+    <IsInstallable><bar:WindowsLanguage Language="en"/></IsInstallable>
+    <IsSuperseded><lar:False/></IsSuperseded>
+  </ApplicabilityRules>
+</Update>

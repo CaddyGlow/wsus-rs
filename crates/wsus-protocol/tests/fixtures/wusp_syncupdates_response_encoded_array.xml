@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <SyncUpdatesResponse xmlns="http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService">
+      <SyncUpdatesResult>
+        <OutOfScopeRevisionIDs soapenc:arrayType="xsd:int[2]">
+          <item>5</item>
+          <item>6</item>
+        </OutOfScopeRevisionIDs>
+        <Truncated>true</Truncated>
+        <NewCookie>
+          <Expiration>2024-05-06T10:20:30Z</Expiration>
+          <EncryptedData>AAECAwQFBgcICQoL</EncryptedData>
+        </NewCookie>
+      </SyncUpdatesResult>
+    </SyncUpdatesResponse>
+  </soap:Body>
+</soap:Envelope>

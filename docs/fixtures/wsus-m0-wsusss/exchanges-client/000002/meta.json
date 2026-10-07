@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.432,
+    "time_to_first_response_byte": 405.741,
+    "total": 405.922,
+    "upstream_connect": 0.254
+  },
+  "error": null,
+  "exchange": 2,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/DssAuthWebService/DssAuthWebService.asmx",
+  "request_body_bytes": 379,
+  "request_body_sha256": "bc571087625a6315c62247980dd775f465feeae7abcaa14bf97265614595e41f",
+  "response_body_bytes": 1085,
+  "response_body_sha256": "5512e2545b558786724e074f3f7b3bab9eb3f4c0d25c13579e1df36266fad64f",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/Server/DssAuthWebService/GetAuthorizationCookie",
+  "status": 200,
+  "timestamp": "2026-10-04T16:09:26.651+00:00",
+  "upstream_body_ms": 0.05
+}

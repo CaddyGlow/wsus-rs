@@ -1,0 +1,75 @@
+[package]
+name = "wsus-client"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "WSUS MS-WUSP and MS-WSUSSS client"
+
+[features]
+default = []
+reqwest-async = ["dep:reqwest", "dep:tokio"]
+# Windows Installer (msiexec) handler. Off by default: no real update in the
+# lab catalog exercises it, so it is host-tested with a fake runner only.
+msi-handler = []
+# Online servicing of Cbs updates through DISM and wusa (docs/wsus-cbs-integration.md). Off by
+# default: the Windows backends use the servicing crates' text parsers.
+cbs-handler = ["dep:windows-dism"]
+# `OSInstaller` updates (docs/wsus-osinstaller-spike.md): the `update_agent` mode drives UpdateAgent.dll through its
+# `UA_*` exports, the `dism` mode reuses the cbs-handler backends. Off by default.
+osinstaller-handler = ["cbs-handler", "dep:wim"]
+# ISO9660/Joliet/UDF image reading and writing through libmkiso. Off by default.
+iso = ["dep:libmkiso"]
+
+[dependencies]
+hexspell.workspace = true
+wsus-protocol.workspace = true
+cabinet.workspace = true
+libmkiso = { workspace = true, optional = true }
+windows-dism = { path = "../../../windows-uup/crates/windows-dism", version = "0.1.0", default-features = false, optional = true }
+wim = { path = "../../../wim-rs/crates/wim", version = "0.1.0", optional = true }
+thiserror = "2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json.workspace = true
+sha1 = "0.10"
+sha2 = "0.10"
+base64 = "0.22"
+uuid = { version = "1.18", features = ["v4", "serde"] }
+tokio = { version = "1", optional = true, features = ["time"] }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_Globalization",
+    "Win32_Security",
+    "Win32_Security_Authorization",
+    "Win32_Security_Cryptography",
+    "Win32_Security_Cryptography_Catalog",
+    "Win32_Security_Cryptography_Sip",
+    "Win32_Security_WinTrust",
+    "Win32_Storage_FileSystem",
+    "Win32_System_ApplicationInstallationAndServicing",
+    "Win32_System_Com",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Registry",
+    "Win32_System_SystemInformation",
+    "Win32_System_Threading",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+    "Wdk_System_SystemServices",
+] }
+reqwest = { version = "0.12", default-features = false, optional = true, features = ["native-tls"] }
+
+[target.'cfg(not(windows))'.dependencies]
+reqwest = { version = "0.12", default-features = false, optional = true, features = ["rustls-tls-native-roots"] }
+
+[dev-dependencies]
+tempfile.workspace = true
+base64 = "0.22"
+uuid = { version = "1.18", features = ["v4", "serde"] }
+tokio = { version = "1", features = ["macros", "rt", "time", "net"] }
+
+[lints]
+workspace = true

@@ -1,0 +1,21 @@
+{
+  "content_exchange": false,
+  "frame_request": 67,
+  "frame_response": 69,
+  "method": "POST",
+  "path": "/ClientWebService/client.asmx",
+  "request_body_bytes": 6805,
+  "request_body_sha256": "6ca7c754a7d7c8116a967e73e08b4b2170cefd487820801e2f8a26e2c797c418",
+  "request_body_size": 6808,
+  "response_body_bytes": 64483,
+  "response_body_sha256": "88b58af2c77a9bac63db619e11a5e3a0162b02d1f6e3c6aed9eb39b2971ce02a",
+  "response_body_size": 64483,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/SyncUpdates\"",
+  "status": 200,
+  "t_request_s": 0.81986,
+  "t_response_s": 0.870771,
+  "tcp_stream": 0,
+  "wire_response_content_encoding": "xpress",
+  "wire_response_content_length": 8554
+}

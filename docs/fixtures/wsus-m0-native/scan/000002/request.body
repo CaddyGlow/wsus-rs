@@ -1,0 +1,1 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetAuthorizationCookie xmlns="http://www.microsoft.com/SoftwareDistribution/Server/SimpleAuthWebService"><clientId>e1da06a3-5601-43c9-bac3-52d5db701494</clientId><dnsName>REDACTED3</dnsName></GetAuthorizationCookie></s:Body></s:Envelope>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <GetFileLocations xmlns="http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService">
+      <cookie xsi:nil="true"/>
+      <fileDigests/>
+    </GetFileLocations>
+  </soap:Body>
+</soap:Envelope>

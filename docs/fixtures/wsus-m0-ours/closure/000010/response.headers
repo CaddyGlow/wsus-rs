@@ -1,0 +1,8 @@
+HTTP/1.1 206 Partial Content
+content-type: application/octet-stream
+content-length: 1048576
+etag: "157d1f273dfdd4105014a80a9c579eed27ade058a433a79bbda207929b9763e7"
+accept-ranges: bytes
+content-range: bytes 1048576-2097151/6662560
+date: Sun, 04 Oct 2026 18:22:22 GMT
+

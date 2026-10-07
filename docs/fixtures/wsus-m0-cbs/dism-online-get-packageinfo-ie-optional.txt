@@ -1,0 +1,39 @@
+
+Deployment Image Servicing and Management tool
+Version: 10.0.26100.5074
+
+Image Version: 10.0.26200.8037
+
+Package information:
+
+Package Identity : Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~11.0.26100.1
+Applicable : Yes
+Copyright : Copyright (c) Microsoft Corporation. All Rights Reserved
+Company : 
+Creation Time : 
+Description : Enables Internet Explorer mode functionality in Microsoft Edge.
+Install Client : 
+Install Package Name : 
+Install Time : 
+Last Update Time : 
+Name : Internet Explorer mode
+Product Name : Microsoft-Windows-InternetExplorer-Optional-Package
+Product Version : 
+Release Type : OnDemand Pack
+Restart Required : Required
+Support Information : http://support.microsoft.com/?kbid=777777
+State : Not Present
+Completely offline capable : Undetermined
+Self servicing package : No
+Capability Identity : Browser.InternetExplorer~~~~0.0.11.0
+
+Custom Properties:
+
+mum2:FodInformation\Id : 27
+
+Features listing for package : Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~11.0.26100.1
+
+Feature Name : Internet-Explorer-Optional-amd64
+State : Disabled
+
+The operation completed successfully.

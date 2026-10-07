@@ -1,0 +1,22 @@
+[package]
+name = "wsus-protocol"
+workspace = "../.."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+description = "WSUS protocol types, SOAP codecs and metadata parsing (no I/O)"
+
+[dependencies]
+thiserror = "2"
+serde = { version = "1.0", features = ["derive"] }
+quick-xml = "0.38"
+sha2 = "0.10"
+uuid = { version = "1.18", features = ["serde"] }
+base64 = "0.22"
+serde_json.workspace = true
+ms-compress = { version = "0.1.0", path = "../../../ms-compress" }
+
+[lints]
+workspace = true

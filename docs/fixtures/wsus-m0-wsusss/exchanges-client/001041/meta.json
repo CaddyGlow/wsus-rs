@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.565,
+    "time_to_first_response_byte": 1.711,
+    "total": 1.91,
+    "upstream_connect": 0.313
+  },
+  "error": null,
+  "exchange": 1041,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ServerSyncWebService/ServerSyncWebService.asmx",
+  "request_body_bytes": 217,
+  "request_body_sha256": "72f3fde88e61b83195da572cdc1a4c1a5990bfbe03de5b53a6fe3fede073e1cd",
+  "response_body_bytes": 604,
+  "response_body_sha256": "05047245bba87117c0b2563abfa7b11fe7aa482f86a8040e2f2fb22cba6026a5",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/GetAuthConfig",
+  "status": 200,
+  "timestamp": "2026-10-04T16:28:07.186+00:00",
+  "upstream_body_ms": 0.083
+}

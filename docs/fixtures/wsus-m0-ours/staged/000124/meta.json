@@ -1,0 +1,21 @@
+{
+  "bodies": "not retained (request body empty; 206 response body omitted)",
+  "content_exchange": true,
+  "frame_request": 3908,
+  "frame_response": 3939,
+  "method": "GET",
+  "path": "/Content/AB/2F88DF42DA48AA980FB748D13BAA2DE49CD154AB.exe",
+  "request_body_bytes": 0,
+  "request_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "request_body_size": 0,
+  "response_body_bytes": 0,
+  "response_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_body_size": 0,
+  "sanitized": true,
+  "status": 206,
+  "t_request_s": 3.272288,
+  "t_response_s": 3.273593,
+  "tcp_stream": 5,
+  "wire_response_content_encoding": null,
+  "wire_response_content_length": 1048576
+}

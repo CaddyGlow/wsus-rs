@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+  <env:Body>
+    <env:Fault>
+      <env:Code><env:Value>env:Sender</env:Value></env:Code>
+      <env:Reason><env:Text xml:lang="en">bad digests</env:Text></env:Reason>
+      <Detail>
+        <ErrorCode>FileDigestsMissing</ErrorCode>
+        <Message>AAAA|BBBB</Message>
+        <ID>6e8d0c3a-3f1e-4b66-9d3e-0a1b2c3d4e5f</ID>
+      </Detail>
+    </env:Fault>
+  </env:Body>
+</env:Envelope>

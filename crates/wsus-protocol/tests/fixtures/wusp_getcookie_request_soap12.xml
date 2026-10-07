@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap12:Body>
+    <GetCookie xmlns="http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService">
+      <authCookies>
+        <AuthorizationCookie>
+          <PlugInId>SimpleTargeting</PlugInId>
+          <CookieData>AQIDBA==</CookieData>
+        </AuthorizationCookie>
+      </authCookies>
+      <oldCookie xsi:nil="true"/>
+      <lastChange>2024-05-01T10:20:30.123Z</lastChange>
+      <currentTime>2024-05-01T10:25:00Z</currentTime>
+      <protocolVersion></protocolVersion>
+    </GetCookie>
+  </soap12:Body>
+</soap12:Envelope>

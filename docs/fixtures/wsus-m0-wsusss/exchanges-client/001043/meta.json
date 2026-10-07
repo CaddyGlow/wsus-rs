@@ -1,0 +1,22 @@
+{
+  "durations_ms": {
+    "request_sent": 0.604,
+    "time_to_first_response_byte": 4.812,
+    "total": 4.989,
+    "upstream_connect": 0.315
+  },
+  "error": null,
+  "exchange": 1043,
+  "http_version": "HTTP/1.1",
+  "method": "POST",
+  "path": "/ServerSyncWebService/ServerSyncWebService.asmx",
+  "request_body_bytes": 967,
+  "request_body_sha256": "a5b080552abe03013d6322fbc925cbac186414fed80ffb0f66dae625735e97df",
+  "response_body_bytes": 738,
+  "response_body_sha256": "c394cb8642e3b0aab0f95ef9958c7834ba8248e59a50cbb44a815e4acfa82d5a",
+  "sanitized": true,
+  "soap_action": "http://www.microsoft.com/SoftwareDistribution/GetCookie",
+  "status": 200,
+  "timestamp": "2026-10-04T16:28:07.236+00:00",
+  "upstream_body_ms": 0.069
+}

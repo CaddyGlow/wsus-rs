@@ -1,0 +1,9 @@
+GET /Content/AB/2F88DF42DA48AA980FB748D13BAA2DE49CD154AB.exe HTTP/1.1
+Connection: Keep-Alive
+Accept: */*
+Range: bytes=0-1048575
+User-Agent: Microsoft-Delivery-Optimization/10.1
+MS-CV: e8u3dmxOhkGW0Ilt.2.0.0.8.1.1.3.1.1.52
+Content-Length: 0
+Host: 192.0.2.1:8530
+

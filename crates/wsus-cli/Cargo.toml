@@ -1,0 +1,55 @@
+[package]
+name = "wsus-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+description = "wsus command line: client, server and local administration"
+
+[lib]
+name = "wsus_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "wsus"
+path = "src/main.rs"
+
+[features]
+default = []
+# Windows Installer handler (unverified; see docs/wsus-install.md).
+msi-handler = ["wsus-client/msi-handler"]
+# Online servicing of Cbs updates through DISM/wusa (docs/wsus-cbs-integration.md).
+cbs-handler = ["wsus-client/cbs-handler"]
+# OSInstaller updates: the update_agent mode drives UpdateAgent.dll, the dism mode reuses cbs-handler
+# (docs/wsus-osinstaller-spike.md).
+osinstaller-handler = ["cbs-handler", "wsus-client/osinstaller-handler"]
+
+[dependencies]
+wsus-protocol.workspace = true
+wsus-client = { workspace = true, features = ["reqwest-async"] }
+wsus-server = { workspace = true, features = ["http"] }
+clap = { workspace = true, features = ["derive", "env"] }
+anyhow.workspace = true
+serde = { version = "1.0", features = ["derive"] }
+serde_json.workspace = true
+toml = "0.9"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "signal", "time"] }
+axum = { version = "0.8", default-features = false, features = ["http1", "tokio"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", default-features = false, features = ["fmt", "json", "env-filter", "std"] }
+reqwest = { version = "0.12", default-features = false }
+sha2 = "0.10"
+sha1 = "0.10"
+uuid = { version = "1.18", features = ["v4"] }
+tempfile.workspace = true
+
+[dev-dependencies]
+cabinet.workspace = true
+tempfile.workspace = true
+base64 = "0.22"
+reqwest = { version = "0.12", default-features = false }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "signal", "time", "io-util"] }
+
+[lints]
+workspace = true

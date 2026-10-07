@@ -1,0 +1,21 @@
+{
+  "content_exchange": false,
+  "frame_request": 14,
+  "frame_response": 16,
+  "method": "POST",
+  "path": "/ClientWebService/client.asmx",
+  "request_body_bytes": 701,
+  "request_body_sha256": "97ac80479f1e029fce00819cf372d71005268ad1950bd940f37c92ea5be9b0c6",
+  "request_body_size": 701,
+  "response_body_bytes": 559,
+  "response_body_sha256": "2d8adf9f7839e69a2a7def18ab1797227a53aa03bbb1f66230244a6168ad237a",
+  "response_body_size": 559,
+  "sanitized": true,
+  "soap_action": "\"http://www.microsoft.com/SoftwareDistribution/Server/ClientWebService/GetCookie\"",
+  "status": 200,
+  "t_request_s": 0.004726,
+  "t_response_s": 0.004829,
+  "tcp_stream": 0,
+  "wire_response_content_encoding": "xpress",
+  "wire_response_content_length": 465
+}
